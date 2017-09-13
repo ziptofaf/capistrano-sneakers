@@ -10,7 +10,7 @@ namespace :load do
     set :sneakers_role, -> { :app }
     set :sneakers_processes, -> { 1 }
     set :sneakers_workers, -> { false } # if this is false it will cause Capistrano to exit
-    set :sneakers_run_config, -> { false } # if this is true sneakers will run with preconfigured /config/initializers/sneakers.rb
+    set :sneakers_run_config, -> { true } # if this is true sneakers will run with preconfigured /config/initializers/sneakers.rb
     set :sneakers_boot_file, -> { false } # Needed for booting daemons dynamically
     # Rbenv and RVM integration
     set :rbenv_map_bins, fetch(:rbenv_map_bins).to_a.concat(%w(sneakers))
